@@ -33,16 +33,6 @@ def add_numbers_post():
   	      	return render_template('add_numbers.html', result=str(total))
   	      except ValueError:
   	      	return "Easy now! Let's keep it simple! 2 numbers with a space between them please"
-	
-@app.route('/print_name', methods=['GET','POST'])
-def print_name(name):
-	if request.method == 'GET':
-		return render_template('print_name.html')
-	elif request.method == 'POST':
-		print(request.form['text'].split())
-		total = 0
-		try:
-			print (name)
 
 
 @app.route('/shopping_list', methods=['GET','POST'])
